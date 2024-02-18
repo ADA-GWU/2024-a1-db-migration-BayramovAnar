@@ -12,13 +12,13 @@ ROLLBACK_SQL = [
     """
     ALTER TABLE students 
     ADD COLUMN st_id INT,
-    ALTER COLUMN st_name TYPE VARCHAR(30),
-    ALTER COLUMN st_last TYPE VARCHAR(30),
+    ALTER COLUMN st_name TYPE VARCHAR(20),
+    ALTER COLUMN st_last TYPE VARCHAR(20),
     DROP COLUMN student_id;
     """,
     """
     ALTER TABLE interests 
-    ADD COLUMN interest VARCHAR(30);
+    ADD COLUMN interest VARCHAR(20);
 
     INSERT INTO interests(student_id, interest) 
     SELECT student_id, unnest(interests) 
