@@ -12,8 +12,8 @@ ROLLBACK_SQL = [
     """
     ALTER TABLE students 
     ADD COLUMN st_id INT,
-    ALTER COLUMN st_name TYPE VARCHAR(15),
-    ALTER COLUMN st_last TYPE VARCHAR(15),
+    ALTER COLUMN st_name TYPE VARCHAR(30),
+    ALTER COLUMN st_last TYPE VARCHAR(30),
     DROP COLUMN student_id;
     """,
     """
