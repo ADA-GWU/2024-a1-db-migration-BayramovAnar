@@ -1,1 +1,2 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/JwSLLxUh)
+# This README includes 3 instructions: 
+## 1. Prerequisites for running the files \n2. Migration and Rollback intructions \n3.Detailed explaination of both 
