@@ -18,7 +18,7 @@ ROLLBACK_SQL = [
     """,
     """
     ALTER TABLE interests 
-    ADD COLUMN interest VARCHAR(15);
+    ADD COLUMN interest VARCHAR(30);
 
     INSERT INTO interests(student_id, interest) 
     SELECT student_id, unnest(interests) 
