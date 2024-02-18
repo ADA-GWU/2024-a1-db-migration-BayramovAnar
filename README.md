@@ -1,5 +1,5 @@
 # This README includes 3 instructions: 
-## 1. Prerequisites for running the files <br />2. Migration and Rollback intructions <br />3.Detailed explaination of both Migration and Rollback files. <br /> 
+### 1. Prerequisites for running the files <br />2. Migration and Rollback intructions <br />3.Detailed explaination of both Migration and Rollback files. <br /> 
 
 ### Prerequisites
 
@@ -22,5 +22,17 @@ Replace the placeholder values in **DB_PARAMS** dictionary with your PostgreSQL 
 * The ```execute_migration()``` function takes a cursor and a list of SQL commands, executes each command one by one, and handles any errors.
 * The ```migrate_students_table()``` and ```migrate_interests_table()``` functions call ```execute_migration()``` with the respective SQL lists.
 * The ```migrate()``` function runs the migration process, executing SQL commands for both tables within a transaction and committing changes if successful.
-* To run Migration, type the following command ```python migration.py```
-   
+* To run Migration, type the following command ```python migration.py```. Upon success, the terminal will display "Migration successful."
+
+
+3. **Rollback File**: <br />
+* Open rollback.py. This file contains rollback SQL commands for "students" and "interests" tables.
+* The ```connect_to_database()``` function is responsible for establishing a connection to the PostgreSQL database using the provided connection parameters (DB_PARAMS).
+* The ```execute_rollback()``` function takes a cursor as input and iterates through the ```ROLLBACK_SQL``` list, executing each SQL command. It also handles any exceptions that may occur during execution.
+* The ```rollback()``` function serves as the entry point for the rollback process. It connects to the database, executes rollback operations for both tables within a transaction, and commits the changes upon successful execution.
+* To run Rollback, type the following command ```python rollback.py```. Upon success, the terminal will display "Rollback successful."
+
+
+  4.**SQL Tables File** contains SQL Commands to create and fill with data STUDENTS and INTERESTS tables. 
+
+
