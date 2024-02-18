@@ -17,7 +17,7 @@ STUDENTS_MIGRATION_SQL = [
 ]
 
 INTERESTS_MIGRATION_SQL = [
-    "ALTER TABLE interests ADD COLUMN interests VARCHAR(15)[];",
+    "ALTER TABLE interests ADD COLUMN interests VARCHAR(20)[];",
     "INSERT INTO interests(student_id, interests) SELECT student_id, ARRAY_AGG(interest) FROM interests GROUP BY(student_id);",
     "DELETE FROM interests WHERE interests.interests IS NULL;",
     "ALTER TABLE interests DROP COLUMN interest;"
